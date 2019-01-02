@@ -1,0 +1,2 @@
+# cool-slideshow
+Simple slideshow
