@@ -1,0 +1,48 @@
+@import url(../../theme);
+@import url(../../assets/less/_variables);
+
+.notFound {
+  position: relative;
+  width: calc(100vw);
+  height: calc(100vh);
+
+  .mainContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      font-weight: 300;
+      font-size: 100px;
+      margin: 0;
+    }
+
+    p {
+      color: @generic-text;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    a {
+      font-size: 14px;
+      background: @brand-secondary;
+      color: @white;
+      text-decoration: none;
+      padding: 15px 20px;
+      line-height: 14px;
+      text-transform: uppercase;
+      .transition(all .3s ease);
+
+      &:hover {
+        background: darken(@brand-secondary, 5%);
+      }
+    }
+
+    img {
+      margin: 0 0 20px;
+      padding: 0;
+    }
+  }
+}
