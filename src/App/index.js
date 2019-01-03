@@ -2,6 +2,8 @@ import React from "react";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Header from "../components/Header";
+import ReproductionList from '../components/ReproductionList';
+import styles from './style.less';
 
 import Home from '../sections/Home';
 import Bible from '../sections/Bible';
@@ -13,7 +15,7 @@ import NotFound from '../sections/NotFound';
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div>
+			<div className={styles.app}>
 				<Header/>
 
 				<Switch>
@@ -24,6 +26,8 @@ const App = () => {
 					<Route path="/projector-screen" component={ProjectorScreen}></Route>
 					<Route component={NotFound}></Route>
 				</Switch>
+
+				<ReproductionList/>
 			</div>
 		</BrowserRouter>
 	);

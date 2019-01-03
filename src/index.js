@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDom from "react-dom";
+
+import {Provider} from "react-redux";
+import store from './modules/store';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import App from './App';
 
 ReactDom.render(
-	<div>
+	<Provider store={store}>
 		<CssBaseline />
 		<App/>
-	</div>,
+	</Provider>,
 	document.getElementById("app")
 );
